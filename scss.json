@@ -1,0 +1,90 @@
+{	
+	"믹스인 사용": {
+		"prefix": "mix",
+		"body": [
+			"@use './mixins.scss' as mix;"
+		],
+	},
+	"반응형 높이": {
+		"prefix": "inclh",
+		"body": [
+			"@include mix.heights(pc or mob,몇칸40기준);"
+		],
+	},
+	"pc용 가로칸수": {
+		"prefix": "wdpc",
+		"body": [
+			"calc(mix.'$$wdPc * 칸수);"
+		],
+	},
+	"태블릿용 가로 칸수": {
+		"prefix": "wdtab",
+		"body": [
+			"calc(mix.$$wdTab * 칸수);"
+		],
+	},
+	"모바일용 가로 칸수": {
+		"prefix": "wdmob",
+		"body": [
+			"calc(mix.$$wdMob * 칸수);"
+		],
+	},
+	"반응형 폰트": {
+		"prefix": "inclf",
+		"body": [
+			"@include mix.fontz(pc or mob,몇칸10기준);"
+		],
+	},
+	"반응형 라인하이트": {
+		"prefix": "incll",
+		"body": [
+			"@include mix.lhz(pc or mob,몇칸40기준);"
+		],
+	},
+	"반응형 마진": {
+		"prefix": "inclmz",
+		"body": [
+			"@include mix.mzn(pc or mob,top or left ... ,몇칸40기준);"
+		],
+	},
+	"반응형 패딩": {
+		"prefix": "inclpd",
+		"body": [
+			"@include mix.pdn(pc or mob,top or left ... ,몇칸40기준);"
+		],
+	},
+	"그리드설정": {
+		"prefix": "inclg",
+		"body": [
+			"@include mix.grid(pc or mob);"
+		],
+	},
+	"이미지기본": {
+		"prefix": "inclim",
+		"body": [
+			"@include mix.imgBc;"
+		],
+	},
+	"이미지심화": {
+		"prefix": "inclin",
+		"body": [
+			"@include mix.imgNw(위치,사이즈);"
+		],
+	},
+	"태블릿용": {
+		"prefix": "tab",
+		"body": [
+			"@include mix.tab{",
+			"\t/*여기안에 태블릿 반응형 내용입력*/",
+			"};"
+		],
+	},
+	"모바일용": {
+		"prefix": "mob",
+		"body": [
+			"@include mix.mob{",
+			"\t/*여기안에 모바일 반응형 내용입력*/",
+			"};"
+		],
+	},
+}
